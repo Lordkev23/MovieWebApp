@@ -1,3 +1,4 @@
+/* GENERAL STYLES */
 body{
     background: #d1deda;
     font-family: sans-serif, Arial, Helvetica, sans-serif;
@@ -18,15 +19,47 @@ body{
         "footer footer footer footer"
     ;
     grid-template-rows: 100px 70px auto 70px;
-    
+
 }
 
+/* HEADER STYLES */
 .header{
     grid-area: header;
-    border: 5px solid black;
-    background: lightcoral;
+
+    background: white;
+    text-align: left;  
+    font-style: italic;
+
+    display: flex;
+    justify-content: center;
 }
 
+.logo{
+    
+    background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+
+    margin-top: 30px;
+}
+
+.play{
+    width: 0;
+    height: 0;
+    margin-top: 15px;
+    margin-left: 16px;
+    border-left: 12px solid white;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+
+.header h1{
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+/* NAVIGATION BAR STYLES */
 .nav{
     grid-area: nav;
     border: 5px solid red;
