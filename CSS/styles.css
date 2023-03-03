@@ -161,7 +161,7 @@ button, input[type="submit"], input[type="button"]{
 }
 
 .lateral input[type="text"],
-.lateral input[type="submit"],
+/* .lateral input[type="text"], */
 .lateral textarea{
     display: block;
     margin: 0 auto;
@@ -176,8 +176,34 @@ button, input[type="submit"], input[type="button"]{
     border-color: transparent;
 }
 
+/* styles for page foot */
 .footer{
     grid-area: footer;
-    border: 5px solid orange;
-    background: lightpink;
+    
+    background: #d1defa;
+    color: #454545;
+    border-top: 1px solid white;
+    text-align: left;
+    line-height: 68px;
+    padding-left: 25px;
+
+}
+
+footer a{
+    color: #0b468a;
+    text-decoration: none;
+}
+
+/* RESPONSIVE with MEDIA QUERY */
+@media(max-width: 1085px){
+    .content{
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .movie-item{
+        width: 80%;
+    }
 }
