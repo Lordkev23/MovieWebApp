@@ -1,10 +1,10 @@
 /* GENERAL STYLES */
 body{
-    background: #d1deda;
+    background: #d1defa;
     font-family: sans-serif, Arial, Helvetica, sans-serif;
     text-align: center;
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
 }
 
 .layout{
@@ -39,8 +39,7 @@ body{
     background: linear-gradient(90deg, #03228f 10%, #0e73e4 100%);
     width: 40px;
     height: 40px;
-    border-radius: 100px;
-
+    border-radius: 300px;
     margin-top: 30px;
 }
 
@@ -101,16 +100,15 @@ body{
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
-
+    flex-grow: 1;
 }
 
 .movie-item{
+    flex-grow: 1;
     background: white;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #ddd;
     margin: 40px;
-    /* margin-left: 20px;
-    margin-right: 20px; */
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 25px;
@@ -119,7 +117,7 @@ body{
 
 button, input[type="submit"], input[type="button"]{
     width: 100px;
-    background: #0e73e4;
+    background: #0b70e1;
     color: white;
     border: 0;
     outline: 0;
@@ -161,8 +159,11 @@ button, input[type="submit"], input[type="button"]{
 }
 
 .lateral input[type="text"],
-/* .lateral input[type="text"], */
-.lateral textarea{
+.lateral input[type="text"],
+.lateral textarea, 
+.edit_form input[type="text"],
+.edit_form input[type="text"],
+.edit_form textarea{
     display: block;
     margin: 0 auto;
     margin-top: 15px;
@@ -176,7 +177,12 @@ button, input[type="submit"], input[type="button"]{
     border-color: transparent;
 }
 
-/* styles for page foot */
+.edit_form{
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* footer styles */
 .footer{
     grid-area: footer;
     
@@ -186,7 +192,6 @@ button, input[type="submit"], input[type="button"]{
     text-align: left;
     line-height: 68px;
     padding-left: 25px;
-
 }
 
 footer a{
