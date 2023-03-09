@@ -1,3 +1,6 @@
+import { AddMovie } from "./components/AddMovie";
+import { List } from "./components/List";
+import { SearchBar } from "./components/SearchBar";
 
 function App() {
   return (
@@ -23,59 +26,17 @@ function App() {
         {/* MAIN CONTENT */}
         <section id = "content" className="content">
 
-            {/* HERE THERE ARE MOVIES */}
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
+            {/* HERE THERE ARE LIST MOVIES */}
+            <List/>
 
         </section>
 
         {/* SIDEBAR */}
         <aside className="lateral">
-            <div className="search">
-                <h3 className="title">Browser</h3>
-                <form>
-                    <input type="text" id="search_field"/>
-                    <button id="search">Search</button>
-                </form>
-            </div>
+            <SearchBar/>
 
-            <div className="add">
-                <h3 className="title">Add Movie</h3>
-                <form>
-                    <input type="text" id="title" placeholder="Title"/>
-                    <textarea id="description" placeholder="Description"></textarea>
-                    <input type="submit" id="save" value="Save"/>
-                </form>
-            </div>
+            <AddMovie/>
+
         </aside>
 
         {/* FOOTER */}
