@@ -1,39 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-export const List = ()=>{
+export const List = () =>{
+
+    const [listStaste, setListState] = useState([]);
+
+    useEffect(() =>{
+        console.log('componets of movie list charged!');
+        getMovies();
+    }, []);
+
+    const getMovies = () =>{
+        let movies = JSON.parse(localStorage.getItem('newMovie'));
+
+        setListState(movies)
+    }
+
     return(
         <>
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
+            { listStaste != null ? listStaste.map(movie => {
+                return(
+                    <article key={movie.id} className="movie-item">
+                    <h3 className="title">{movie.title}</h3>
+                    <p className="description">{movie.description}</p>
 
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
-
-            <article className="movie-item">
-                <h3 className="title">Web Develope</h3>
-                <p className="description">This is a description</p>
-
-                <button className="edit">Edit</button>
-                <button className="delete">Delete</button>
-            </article>
+                    <button className="edit">Edit</button>
+                    <button className="delete">Delete</button>
+                </article>
+                );
+            }): <h2>There aren't movies to show in this moment</h2>}
         </>
     )
 }
