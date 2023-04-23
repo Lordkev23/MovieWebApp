@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-export const List = () =>{
+export const List = ({listStaste, setListState}) =>{
 
-    const [listStaste, setListState] = useState([]);
+    // const [listStaste, setListState] = useState([]);
 
     useEffect(() =>{
         console.log('componets of movie list charged!');

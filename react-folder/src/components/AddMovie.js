@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { SaveInStorage } from "../helpers/SaveInStorage";
 
-export const AddMovie = () =>{
+export const AddMovie = ({setListState}) =>{
 
     const title = "Add Movie";
 
@@ -30,6 +30,11 @@ alert(title + " " + description)
         
         //Save State
         setMovieState(movie);
+
+        //Refresh state of principal list
+        setListState((elements)=>{
+            return[...elements, movie];
+        });
 
         //Save in local Storage
         SaveInStorage("newMovie", movie);
