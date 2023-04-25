@@ -5,7 +5,7 @@ import { SearchBar } from "./components/SearchBar";
 
 function App() {
 
-    const [listStaste, setListState] = useState([]);
+    const [listState, setListState] = useState([]);
 
   return (
     <div className="layout">
@@ -31,13 +31,13 @@ function App() {
         <section id = "content" className="content">
 
             {/* HERE THERE ARE LIST MOVIES */}
-            <List listStaste={listStaste} setListState={setListState}/>
+            <List listState={listState} setListState={setListState}/>
 
         </section>
 
         {/* SIDEBAR */}
         <aside className="lateral">
-            <SearchBar/>
+            <SearchBar listState={listState} setListState={setListState}/>
 
             <AddMovie setListState={setListState}/>
 

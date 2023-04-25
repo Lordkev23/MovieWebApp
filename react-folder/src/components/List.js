@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Edit } from './Edit';
 
-export const List = ({listStaste, setListState}) =>{
+export const List = ({listState, setListState}) =>{
 
-    // const [listStaste, setListState] = useState([]);
+    // const [listState, setListState] = useState([]);
 
     const [edit, setEdit] = useState(0);
 
@@ -36,7 +36,7 @@ export const List = ({listStaste, setListState}) =>{
 
     return(
         <>
-            { listStaste != null ? listStaste.map(movie => {
+            { listState != null ? listState.map(movie => {
                 return(
                     <article key={movie.id} className="movie-item">
                     <h3 className="title">{movie.title}</h3>
